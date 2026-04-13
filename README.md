@@ -11,12 +11,17 @@ Creating a Microsoft Entra ID for Frontend Devs in my Organization
 
 
 5. I SSHed into the VM, then ran the following command prompts in the terminal:
+```
 sudo adduser newuser
 sudo mkdir /home/newuser/.ssh
 sudo nano /home/newuser/.ssh/authorized_keys
 Inside the authorized_keys file, I pasted the public_keys of the users i created.
+```
 
 Then finally, I ran the following command.
+
+```
 sudo chown -R newuser:newuser /home/newuser/.ssh
 sudo chmod 700 /home/newuser/.ssh
 sudo chmod 600 /home/newuser/.ssh/authorized_keys
+```
